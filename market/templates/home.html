@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Project</title>
+    <!-- Bootstrap 5.3 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body class="" style="height: 1000px; background-color: #161616;">
+
+    <!-- Bootstrap 5.3 JS with Popper -->
+  <div class="container-fluid ">
+
+
+<nav class="navbar bg-body-tertiary fixed-top z-3" style="width: 70px; height:56px; padding-bottom: 10pxpx; padding-top: 0px;">
+  <div class="container-fluid d-flex justify-content-start">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">My Market</h5>
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+          <li class="nav-item my-2">
+            <a class="nav-link active d-inline p-0" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item my-2">
+            <a class="nav-link d-inline p-0" href="{{ url_for('login_page') }}">Sign in</a>
+          </li>
+          <li class="nav-item dropdown my-2">
+            <a class="nav-link dropdown-toggle d-inline p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Computers</a></li>
+              <li><a class="dropdown-item" href="#">Smart phones</a></li>
+               <li><a class="dropdown-item" href="#">Laptops</a></li>
+                <li><a class="dropdown-item" href="#">Accessories</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else</a></li>
+            </ul>
+          </li>
+           <li class="nav-item my-2">
+            <a class="nav-link d-inline p-0" href="#">Gift cards</a>
+          </li>
+           <li class="nav-item  my-2">
+            <a class="nav-link d-inline p-0" href="#">Discounts</a>
+          </li>
+          <li class="nav-item  my-2">
+            <a class="nav-link d-inline p-0" href="#">International Shopping</a>
+          </li>
+          
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search for something.." aria-label="Search"/>
+          <button class="btn btn-outline-dark" type="submit">Search</button>
+         
+        </form>
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16" style="width: 300px; margin-top:40px">
+  <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/>
+</svg>
+         <ul class="navbar-nav justify-content-start flex-grow-1 pe-3" style="margin-top: 69.5px; ">
+            <li class="nav-item">
+            <a class="nav-link d-inline p-0" href="#">Contact Us!</a>
+          </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-md bg-body-tertiary fixed-top z-2" style="margin-left: 70px;">
+  <div class="container-fluid d-flex justify-content-start z-3">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Shop</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Items
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Items on Sale</a></li>
+            <li><a class="dropdown-item" href="#">Items on Credit</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else..</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><div class="d-flex align-items-center">
+          <a class="nav-link disabled" aria-disabled="true">My Cart</a> 
+          <svg style="opacity: 0.5;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+  <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+</svg>
+          </div>
+
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search.." aria-label="Search"/>
+        <button class="btn btn-outline-dark" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+  </div>
+
+</div>
+    <!-- Check highlited lines for Explaination -->
+
+    <img class="img-fluid z-0" src="{{ url_for('static', filename='backg3.jpg') }}" alt="" style="height: 400px; width:1654.91px; object-fit: cover; margin-top: 55px; border-radius:5px;">
+
+    <div class="container-fluid  z-1" style="margin-top: -240px; padding-bottom: 50px; ">
+        <div class="row justify-content-center gy-5">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  d-flex justify-content-center">
+                <div class="card text-bg-dark" style="width: 18rem;">
+  <img src="{{ url_for('static', filename='mcbook.jpg') }}" class="card-img-top" alt="..." style="height: 191.02px;">
+  <div class="card-body">
+    <h5 class="card-title">Laptop</h5>
+    <p class="card-text">M5 Mcbook with special features smooth Movement and effecient Battery! </p>
+    <a href="#" class="btn btn-outline-light">Add to Cart</a>
+  </div>
+</div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  d-flex justify-content-center"><div class="card text-bg-dark" style="width: 18rem;">
+  <img src="{{ url_for('static', filename='iphone.jpg') }}" class="card-img-top" alt="..." style="height: 191.02px;">
+  <div class="card-body">
+    <h5 class="card-title">Smart Phone</h5>
+    <p class="card-text">Iphone x with 256 Gbs of Storage 18 inch Screen and an Effecient processor!</p>
+    <a href="#" class="btn btn-outline-light">Add to Cart</a>
+  </div>
+</div></div>
+<div class="col-12 col-sm-6 col-md-4 col-lg-3  d-flex justify-content-center">
+    <div class="card text-bg-dark" style="width: 18rem;">
+  <img src="{{ url_for('static', filename='ps5-2.jpg') }}" class="card-img-top" alt="..." style="height: 191.02px;" >
+  
+  <div class="card-body">
+    <h5 class="card-title">Ps5</h5>
+    <p class="card-text">PlayStation 5 delivers ultra-high-speed performance with its custom SSD, and smooth 4K gameplay.</p>
+    <a href="#" class="btn btn-outline-light">Add to Cart</a>
+  </div>
+</div>
+</div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center"><div class="card text-bg-dark" style="width: 18rem;">
+  <img src="{{ url_for('static', filename='microwave.jpg') }}" class="card-img-top" alt="..." style="height: 191.02px;">
+  <div class="card-body">
+    <h5 class="card-title">Microwave</h5>
+    <p class="card-text">Quick, convenient, and powerful — this sleek microwave features multiple power levels.</p>
+    <a href="#" class="btn btn-outline-light">Add to Cart</a>
+  </div>
+</div></div>
+
+
+
+
+   
+           
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  d-flex justify-content-center">
+         
+              <div class="card text-bg-dark" style="width: 18rem;">
+  <img src="{{ url_for('static', filename='applew.jpg') }}" class="card-img-top" alt="..." style="height: 191.02px;">
+  <div class="card-body">
+    <h5 class="card-title">Smart Watch</h5>
+    <p class="card-text">Stay connected, active, and on time — the Apple Watch brings health tracking and smart notifications! </p>
+    <a href="#" class="btn btn-outline-light">Add to Cart</a>
+  </div>
+</div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  d-flex justify-content-center"><div class="card text-bg-dark" style="width: 18rem;">
+  <img src="{{ url_for('static', filename='headsets.jpg') }}" class="card-img-top" alt="..." style="height: 191.02px;">
+  <div class="card-body">
+    <h5 class="card-title">Head Set</h5>
+    <p class="card-text">Immerse yourself in rich, clear sound with this high-quality headset — perfect for gaming.</p>
+    <a href="#" class="btn btn-outline-light">Add to Cart</a>
+  </div>
+</div></div>
+<div class="col-12 col-sm-6 col-md-4 col-lg-3  d-flex justify-content-center">
+    <div class="card text-bg-dark" style="width: 18rem;">
+  <img src="{{ url_for('static', filename='camera.jpg') }}" class="card-img-top" alt="..." style="height: 191.02px;" >
+  
+  <div class="card-body">
+    <h5 class="card-title">Camera</h5>
+    <p class="card-text">Capture life’s moments in stunning detail with this high-resolution camera — ideal for photography</p>
+    <a href="#" class="btn btn-outline-light">Add to Cart</a>
+  </div>
+</div>
+</div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  d-flex justify-content-center"><div class="card text-bg-dark" style="width: 18rem;">
+  <img src="{{ url_for('static', filename='pc.jpg') }}" class="card-img-top" alt="..." style="height: 191.02px;">
+  <div class="card-body">
+    <h5 class="card-title">Computer</h5>
+    <p class="card-text">Experience powerful performance and seamless multitasking with this high-speed PC</p>
+    <a href="#" class="btn btn-outline-light">Add to Cart</a>
+  </div>
+</div></div>
+
+
+  </div>   
+
+</div>
+
+
+    <!-- Bootstrap 5.3 JS with Popper -->
+<script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  </body>
+</html>
