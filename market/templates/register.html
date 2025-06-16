@@ -12,22 +12,24 @@ Sign Up | MyMarket
 
     <form method="POST" action="/login" novalidate>
       <div class="mb-3">
-        <label for="username" class="form-label" style="color: #f0f0f0;">Username</label>
-        <input type="username" class="form-control" id="username" name="username" required placeholder="Enter Your Username">
+        <label for="username" class="form-label" style="color: #f0f0f0;">{{form.username.label()}}</label>
+        <input type="username" class="form-control" id="Username" name="Username" required placeholder="Enter Your Username">
       </div>
 
         <div class="mb-3">
-        <label for="email" class="form-label" style="color: #f0f0f0;">Email address</label>
-        <input type="email" class="form-control" id="email" name="email" required placeholder="Enter Your Email">
+        <label for="email" class="form-label" style="color: #f0f0f0;">{{form.email.label()}}</label>
+        <input type="email" class="form-control" id="Email" name="Email" required placeholder="Enter Your Email">
       </div>
 
+<!-- #kol el form.label mlhash ay lazma -->
+
       <div class="mb-4">
-        <label for="password" class="form-label" style="color: #f0f0f0;" >Password</label>
-        <input type="password" class="form-control" id="password" name="password" required placeholder="Enter Your Password">
+        <label for="password" class="form-label" style="color: #f0f0f0;" >{{form.password1.label()}}</label>
+        <input type="password" class="form-control" id="Password" name="Password" required placeholder="Enter Your Password">
       </div>
       <div class="mb-3">
-        <label for="password-confirmation" class="form-label" style="color: #f0f0f0;">Confirm Password</label>
-        <input type="password-confirmation" class="form-control" id="password-confirmation" name="password-confirmation" required placeholder="Confirm Your Password">
+        <label for="password-confirmation" class="form-label" style="color: #f0f0f0;">{{form.password2.label()}}</label>
+        <input type="password-confirmation" class="form-control" id="Confirm Password" name="Confirm Password" required placeholder="Confirm Your Password">
       </div>
       <div class="d-grid">
         <button type="submit" class="btn btn-signin">Register</button>
