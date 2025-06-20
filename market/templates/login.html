@@ -72,6 +72,16 @@
   </style>
 </head>
 <body>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+
+      {% for message in messages %}
+        <p>{{ message }}</p>
+       
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
 {% block content %}
   <div class="card">
     <div class="logo-text">MyMarket</div>
