@@ -5,7 +5,7 @@ Sign Up | MyMarket
 {% endblock %}
 
 {% block content %}
-  <div class="card">
+  <div class="card ">
     <div class="logo-text">MyMarket</div>
 
     <h2 class="text-center mb-4" style="color: white;">Sign Up</h2>
@@ -14,9 +14,12 @@ Sign Up | MyMarket
         {{ form.hidden_tag() }}
       <div class="mb-3">
         <label for="username" class="form-label" style="color: #f0f0f0;">{{form.username.label()}}</label>
-        <input type="username" class="form-control" id="Username" name="username" required placeholder="Enter Your Username">
-      </div>
+        <input type="username" class="form-control mb-3" id="Username" name="username" required placeholder="Enter Your Username">
+        {% if form.username.errors %}
+<div class="form-text text-danger " style="font-size: 13px;height:9px; margin-top:-6px">{{ form.username.errors[0] }}</div>
 
+      </div>
+{% endif %}
         <div class="mb-3">
         <label for="email" class="form-label" style="color: #f0f0f0;">{{form.email.label()}}</label>
         <input type="email" class="form-control" id="Email" name="email" required placeholder="Enter Your Email">
